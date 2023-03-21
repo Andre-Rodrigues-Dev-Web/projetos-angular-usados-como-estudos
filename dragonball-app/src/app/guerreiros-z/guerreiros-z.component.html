@@ -1,0 +1,16 @@
+<ng-container *ngIf="personagens">
+  <div class="row">
+    <div class="col-sm-6 col-md-4" *ngFor="let personagem of personagens">
+      <div class="card mb-4">
+        <img [src]="personagem.foto_perfil" class="card-img-top" alt="Foto do personagem">
+        <div class="card-body">
+          <h5 class="card-title">{{ personagem.nome }}</h5>
+          <p class="card-text">{{ personagem.descricao }}</p>
+          <ul>
+            <li *ngFor="let poder of personagem.poderes">{{ poder }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
