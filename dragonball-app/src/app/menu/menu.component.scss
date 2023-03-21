@@ -1,0 +1,35 @@
+.navbar{
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  .container_menu{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    .navbar-brand{
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .navbar-toggler{
+      display: none;
+      @media(min-width: 768px){
+        display: none;
+      }
+    }
+    .navbar-nav{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .nav-item{
+        padding: 10px 0;
+        .nav-link{
+          color: #fff;
+        }
+      }
+    }
+  }
+}

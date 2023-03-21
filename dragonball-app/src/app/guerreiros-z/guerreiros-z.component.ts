@@ -7,18 +7,23 @@ import { DragonBallService } from '../services/api/dragon-ball.service';
   styleUrls: ['./guerreiros-z.component.scss']
 })
 export class GuerreirosZComponent implements OnInit {
-  personagens!: any[];
+  animes: any;
 
-  constructor(private dragonBallService: DragonBallService) {}
+  constructor(private DragonBallService: DragonBallService) { }
 
-  ngOnInit(): void {
-    this.getPersonagens();
+  ngOnInit() {
+    this.getAnimes();
   }
 
-  getPersonagens(): void {
-    this.dragonBallService.getPersonagens()
-      .subscribe(data => {
-        this.personagens = data.personagens;
-      });
+  getAnimes() {
+    this.DragonBallService.getAnimes()
+      .subscribe(
+        data => {
+          this.animes = data;
+        },
+        error => {
+          console.log(error);
+        }
+      );
   }
 }

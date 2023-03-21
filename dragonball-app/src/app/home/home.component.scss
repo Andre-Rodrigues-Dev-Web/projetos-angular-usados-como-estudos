@@ -1,0 +1,19 @@
+.wrap{
+  .banner{
+    background-image: url(https://v5j9q4b5.rocketcdn.me/wp-content/uploads/2019/07/melhores-animes-da-historia-25-animes-que-voce-nao-pode-deixar-de-assistir.jpg);
+    background-position-y: -20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 5px;
+    height: 60vh;
+    margin: 0 auto;
+    position: relative;
+    top: 60px;
+    width: 98%;
+    .overlay{
+      background-color: #00000057;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,16 +1,14 @@
-<ng-container *ngIf="personagens">
-  <div class="row">
-    <div class="col-sm-6 col-md-4" *ngFor="let personagem of personagens">
-      <div class="card mb-4">
-        <img [src]="personagem.foto_perfil" class="card-img-top" alt="Foto do personagem">
-        <div class="card-body">
-          <h5 class="card-title">{{ personagem.nome }}</h5>
-          <p class="card-text">{{ personagem.descricao }}</p>
-          <ul>
-            <li *ngFor="let poder of personagem.poderes">{{ poder }}</li>
-          </ul>
-        </div>
+<div class="row" aria-label="Animes">
+  <div class="col-md-4" *ngFor="let anime of animes">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <img src="{{ anime.imagem }}" class="card-img" alt="{{ anime.nome }}" role="img">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ anime.nome }}</h5>
+        <p class="card-text">Ano de criação: {{ anime.ano_criacao }}</p>
+        <a href="{{ anime.link_visualizacao }}" aria-label="Link de visualização" title="Link de visualização">Ver mais</a>
       </div>
     </div>
   </div>
-</ng-container>
+</div>
